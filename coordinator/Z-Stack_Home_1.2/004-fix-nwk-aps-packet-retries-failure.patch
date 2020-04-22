@@ -1,0 +1,13 @@
+diff --git a/Components/stack/zdo/ZDApp.c b/Components/stack/zdo/ZDApp.c
+index 6bd16ef..b3f77ba 100644
+--- a/Components/stack/zdo/ZDApp.c
++++ b/Components/stack/zdo/ZDApp.c
+@@ -132,7 +132,7 @@
+ 
+ // Delay time before updating NWK NV data to force fewer writes during high activity.
+ #if ZDO_NV_SAVE_RFDs
+-#define ZDAPP_UPDATE_NWK_NV_TIME 700
++#define ZDAPP_UPDATE_NWK_NV_TIME 3500
+ #else
+ #define ZDAPP_UPDATE_NWK_NV_TIME 65000
+ #endif
