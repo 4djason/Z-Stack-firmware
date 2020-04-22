@@ -1,0 +1,19 @@
+diff --git a/Components/stack/nwk/nwk_globals.c b/Components/stack/nwk/nwk_globals.c
+index ba06b98..d7d3489 100644
+--- a/Components/stack/nwk/nwk_globals.c
++++ b/Components/stack/nwk/nwk_globals.c
+@@ -70,10 +70,10 @@
+  * CONSTANTS
+  */
+ // Maximums for the data buffer queue
+-#define NWK_MAX_DATABUFS_WAITING    8     // Waiting to be sent to MAC
+-#define NWK_MAX_DATABUFS_SCHEDULED  5     // Timed messages to be sent
+-#define NWK_MAX_DATABUFS_CONFIRMED  5     // Held after MAC confirms
+-#define NWK_MAX_DATABUFS_TOTAL      12    // Total number of buffers
++#define NWK_MAX_DATABUFS_WAITING    16    // Waiting to be sent to MAC
++#define NWK_MAX_DATABUFS_SCHEDULED  10    // Timed messages to be sent
++#define NWK_MAX_DATABUFS_CONFIRMED  10    // Held after MAC confirms
++#define NWK_MAX_DATABUFS_TOTAL      24    // Total number of buffers
+ 
+ // 1-255 (0 -> 256) X RTG_TIMER_INTERVAL
+ // A known shortcoming is that when a message is enqueued as "hold" for a
