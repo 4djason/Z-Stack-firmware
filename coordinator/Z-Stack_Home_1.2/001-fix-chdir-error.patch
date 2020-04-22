@@ -1,0 +1,13 @@
+diff --git a/Projects/zstack/ZNP/CC253x/tools/znp.bat b/Projects/zstack/ZNP/CC253x/tools/znp.bat
+index bb0566c..e324d3c 100644
+--- a/Projects/zstack/ZNP/CC253x/tools/znp.bat
++++ b/Projects/zstack/ZNP/CC253x/tools/znp.bat
+@@ -41,7 +41,7 @@ rem ****************************************************************************
+ if "%2"=="" goto Usage
+ 
+ :Launch
+-chdir %1
++chdir /D %1
+ start znp.js %2
+ exit /b
+ 
