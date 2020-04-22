@@ -1,0 +1,13 @@
+diff --git a/Components/stack/zdo/ZDApp.c b/Components/stack/zdo/ZDApp.c
+index ed82032..6bd16ef 100644
+--- a/Components/stack/zdo/ZDApp.c
++++ b/Components/stack/zdo/ZDApp.c
+@@ -557,7 +557,7 @@ UINT16 ZDApp_event_loop( uint8 task_id, UINT16 events )
+ #endif
+     {
+       // Set the NV startup option to force a "new" join.
+-      zgWriteStartupOptions( ZG_STARTUP_SET, ZCD_STARTOPT_DEFAULT_NETWORK_STATE );
++      zgWriteStartupOptions( ZG_STARTUP_SET, ZCD_STARTOPT_DEFAULT_NETWORK_STATE | ZCD_STARTOPT_DEFAULT_CONFIG_STATE );
+ 
+       // The device has been in the UNAUTH state, so reset
+       // Note: there will be no return from this call
