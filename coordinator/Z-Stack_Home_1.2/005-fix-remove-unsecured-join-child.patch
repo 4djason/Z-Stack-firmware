@@ -1,0 +1,51 @@
+diff --git a/Components/stack/zdo/ZDObject.c b/Components/stack/zdo/ZDObject.c
+index 89cd80c..128effc 100644
+--- a/Components/stack/zdo/ZDObject.c
++++ b/Components/stack/zdo/ZDObject.c
+@@ -1804,21 +1804,31 @@ void ZDO_ProcessMgmtPermitJoinReq( zdoIncomingMsg_t *inMsg )
+ {
+   uint8 stat;
+   uint8 duration;
+-  uint8 tcsig;
++  // uint8 tcsig;
+ 
+   duration = inMsg->asdu[ZDP_MGMT_PERMIT_JOIN_REQ_DURATION];
+-  tcsig    = inMsg->asdu[ZDP_MGMT_PERMIT_JOIN_REQ_TC_SIG];
++  // Per R21 Spec this field is not longer relevant 2.4.3.3.7.2 (Mgmt_Permit_Joining_req Effect on Receipt)
++  // tcsig    = inMsg->asdu[ZDP_MGMT_PERMIT_JOIN_REQ_TC_SIG];
++
++  // Per R21 Spec this duration cannot last forever 2.4.3.3.7.2 (Mgmt_Permit_Joining_req Effect on Receipt)
++  if (duration == 0xFF)
++  {
++    duration = 0xFE;
++  }
+ 
+   // Set the network layer permit join duration
+   stat = (byte) NLME_PermitJoiningRequest( duration );
+ 
++  // Handle the permit joining if running a distributed network
++  if ( APSME_IsDistributedSecurity() )
++  {
++    ZDSecMgrPermitJoining( duration );
++  }
++
+   // Handle the Trust Center Significance
+   if ( ZG_SECURE_ENABLED && ZG_BUILD_COORDINATOR_TYPE && ZG_DEVICE_COORDINATOR_TYPE )
+   {
+-    if ( tcsig == TRUE )
+-    {
+-      ZDSecMgrPermitJoining( duration );
+-    }
++    ZDSecMgrPermitJoining( duration );
+   }
+ 
+   // Send a response if unicast
+@@ -1950,7 +1960,7 @@ void ZDO_ProcessDeviceAnnce( zdoIncomingMsg_t *inMsg )
+ 
+   if ( (_NIB.nwkState != NWK_ROUTER) && (_NIB.nwkState != NWK_ENDDEVICE) )
+   {
+-    // we aren’t stable, ignore the message
++    // we aren't stable, ignore the message
+     return;
+   }
+   
