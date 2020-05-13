@@ -1,0 +1,100 @@
+diff --git a/Projects/zstack/ZNP/CC253x/CC2530.ewp b/Projects/zstack/ZNP/CC253x/CC2530.ewp
+index 6e162de..8dc8369 100644
+--- a/Projects/zstack/ZNP/CC253x/CC2530.ewp
++++ b/Projects/zstack/ZNP/CC253x/CC2530.ewp
+@@ -2409,7 +2409,7 @@
+         </option>
+         <option>
+           <name>General Xdata Stack Size</name>
+-          <state>0x4D0</state>
++          <state>0x300</state>
+         </option>
+         <option>
+           <name>General Ext Stack Size</name>
+@@ -2531,11 +2531,8 @@
+         </option>
+         <option>
+           <name>CCDefines</name>
+-          <state>FEATURE_SYSTEM_STATS</state>
+-          <state>ASSERT_RESET</state>
+-          <state>POWER_SAVING</state>
+-          <state>MAKE_CRC_SHDW</state>
+-          <state>xTC_LINKKEY_JOIN</state>
++          <state>FIRMWARE_CC2530</state>
++          <state>FIRMWARE_SBL</state>
+         </option>
+         <option>
+           <name>CCPreprocFile</name>
+@@ -3525,7 +3522,7 @@
+         </option>
+         <option>
+           <name>General Xdata Stack Size</name>
+-          <state>0x4D0</state>
++          <state>0x300</state>
+         </option>
+         <option>
+           <name>General Ext Stack Size</name>
+@@ -3647,11 +3644,7 @@
+         </option>
+         <option>
+           <name>CCDefines</name>
+-          <state>FEATURE_SYSTEM_STATS</state>
+-          <state>ASSERT_RESET</state>
+-          <state>POWER_SAVING</state>
+-          <state>FAKE_CRC_SHDW</state>
+-          <state>xTC_LINKKEY_JOIN</state>
++          <state>FIRMWARE_CC2530</state>
+         </option>
+         <option>
+           <name>CCPreprocFile</name>
+diff --git a/Projects/zstack/ZNP/CC253x/CC2531.ewp b/Projects/zstack/ZNP/CC253x/CC2531.ewp
+index 3545bdc..bd84080 100644
+--- a/Projects/zstack/ZNP/CC253x/CC2531.ewp
++++ b/Projects/zstack/ZNP/CC253x/CC2531.ewp
+@@ -2417,7 +2417,7 @@
+         </option>
+         <option>
+           <name>General Xdata Stack Size</name>
+-          <state>0x4D0</state>
++          <state>0x300</state>
+         </option>
+         <option>
+           <name>General Ext Stack Size</name>
+@@ -2539,12 +2539,8 @@
+         </option>
+         <option>
+           <name>CCDefines</name>
+-          <state>FEATURE_SYSTEM_STATS</state>
+-          <state>CC2531ZNP</state>
+-          <state>POWER_SAVING</state>
+-          <state>ASSERT_RESET</state>
+-          <state>MAKE_CRC_SHDW</state>
+-          <state>xTC_LINKKEY_JOIN</state>
++          <state>FIRMWARE_SBL</state>
++          <state>FIRMWARE_CC2531</state>
+         </option>
+         <option>
+           <name>CCPreprocFile</name>
+@@ -3537,7 +3533,7 @@
+         </option>
+         <option>
+           <name>General Xdata Stack Size</name>
+-          <state>0x4D0</state>
++          <state>0x300</state>
+         </option>
+         <option>
+           <name>General Ext Stack Size</name>
+@@ -3659,12 +3655,7 @@
+         </option>
+         <option>
+           <name>CCDefines</name>
+-          <state>FEATURE_SYSTEM_STATS</state>
+-          <state>CC2531ZNP</state>
+-          <state>POWER_SAVING</state>
+-          <state>ASSERT_RESET</state>
+-          <state>FAKE_CRC_SHDW</state>
+-          <state>xTC_LINKKEY_JOIN</state>
++          <state>FIRMWARE_CC2531</state>
+         </option>
+         <option>
+           <name>CCPreprocFile</name>
