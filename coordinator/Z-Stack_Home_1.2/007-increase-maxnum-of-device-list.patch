@@ -1,0 +1,26 @@
+diff --git a/Projects/zstack/ZNP/CC253x/Source/preinclude.h b/Projects/zstack/ZNP/CC253x/Source/preinclude.h
+index 5ab4fd5..4315a25 100644
+--- a/Projects/zstack/ZNP/CC253x/Source/preinclude.h
++++ b/Projects/zstack/ZNP/CC253x/Source/preinclude.h
+@@ -71,8 +71,8 @@
+     #define NWK_MAX_DEVICE_LIST 5
+     #define MAXMEMHEAP 3309
+   #else
+-    #define NWK_MAX_DEVICE_LIST 20
+-    #define MAXMEMHEAP 3285
++    #define NWK_MAX_DEVICE_LIST 48
++    #define MAXMEMHEAP 2949
+   #endif
+   
+ // CC2530
+@@ -86,8 +86,8 @@
+     #define NWK_MAX_DEVICE_LIST 5
+     #define MAXMEMHEAP 3189
+   #else
+-    #define NWK_MAX_DEVICE_LIST 16
+-    #define MAXMEMHEAP 3277
++    #define NWK_MAX_DEVICE_LIST 48
++    #define MAXMEMHEAP 2829
+   #endif
+ 
+ // CC2530 + CC2591
