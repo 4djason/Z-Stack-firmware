@@ -1,0 +1,13 @@
+diff --git a/Projects/zstack/Utilities/BootLoad/CC2530ZNP/Boot.ewp b/Projects/zstack/Utilities/BootLoad/CC2530ZNP/Boot.ewp
+index 169c4dc..933ad58 100644
+--- a/Projects/zstack/Utilities/BootLoad/CC2530ZNP/Boot.ewp
++++ b/Projects/zstack/Utilities/BootLoad/CC2530ZNP/Boot.ewp
+@@ -301,7 +301,7 @@
+           <state>HAL_SB_BOOT_CODE</state>
+           <state>HAL_UART_SPI=2</state>
+           <state>LOCK_THE_BOOT_IMAGE_PAGES_IN_HEX_FILE</state>
+-          <state>SBL_WAIT_TIME=60</state>
++          <state>SBL_WAIT_TIME=5</state>
+           <state>NO_WD_RESET_FOR_BOOTLOADER</state>
+         </option>
+         <option>
