@@ -1,0 +1,22 @@
+diff --git a/Projects/zstack/Utilities/BootLoad/CC2530ZNP/source/sb_main.c b/Projects/zstack/Utilities/BootLoad/CC2530ZNP/source/sb_main.c
+index 79ebb82..5d70481 100644
+--- a/Projects/zstack/Utilities/BootLoad/CC2530ZNP/source/sb_main.c
++++ b/Projects/zstack/Utilities/BootLoad/CC2530ZNP/source/sb_main.c
+@@ -24,7 +24,7 @@
+   its documentation for any purpose.
+ 
+   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+-  PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
++  PROVIDED ï¿½AS ISï¿½ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+@@ -264,7 +264,7 @@ static void sblInit(void)
+ #if defined CC2530_MK
+   znpCfg1 = ZNP_CFG1_SPI;
+ #else
+-  znpCfg1 = P2_0;
++  znpCfg1 = ZNP_CFG1_UART;
+ #endif
+   if (znpCfg1 == ZNP_CFG1_SPI)
+   {
